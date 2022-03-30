@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Read from "./Read";
 import { Link } from "react-router-dom";
 import Popup from "./Popup";
-import usePopup from "../context/Context";
 import { Button, TextField, Typography } from "@mui/material";
 import "../styles/search.css";
 
@@ -12,8 +11,6 @@ const Search = () => {
     const result = e.target.value.toLowerCase();
     setInputText(result);
   };
-
-  const { didUpdate } = usePopup();
 
   return (
     <div>

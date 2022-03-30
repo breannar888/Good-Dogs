@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import usePopup from "../context/Context";
+import useDogs from "../context/Context";
 import "../styles/read.css";
 import {
   Card,
@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 
 const Read = (props) => {
-  const { setDidUpdate, dogAPI, setDogAPI } = usePopup();
+  const { setDidUpdate, dogAPI, setDogAPI } = useDogs();
 
   useEffect(() => {
     axios
@@ -28,7 +28,7 @@ const Read = (props) => {
     if (props.input === "") {
       return dog;
     } else {
-      return dog.dogName.toLowerCase().includes(props.input);
+      return dog.dogName.toLowerCase().startsWith(props.input);
     }
   });
 

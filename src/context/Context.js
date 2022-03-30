@@ -1,8 +1,8 @@
 import React, { useContext, createContext, useState } from "react";
 
-const PopupContext = createContext();
+const DogsContext = createContext();
 
-export function PopupProvider({ children }) {
+export function DogsProvider({ children }) {
   const [didUpdate, setDidUpdate] = useState(false);
   const [dogAPI, setDogAPI] = useState([]);
 
@@ -13,11 +13,9 @@ export function PopupProvider({ children }) {
     setDogAPI,
   };
 
-  return (
-    <PopupContext.Provider value={value}>{children}</PopupContext.Provider>
-  );
+  return <DogsContext.Provider value={value}>{children}</DogsContext.Provider>;
 }
 
-export default function usePopup() {
-  return useContext(PopupContext);
+export default function useDogs() {
+  return useContext(DogsContext);
 }

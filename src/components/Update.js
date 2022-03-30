@@ -7,13 +7,15 @@ import {
   MenuItem,
 } from "@mui/material";
 import axios from "axios";
-import usePopup from "../context/Context";
+import useDogs from "../context/Context";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 import "../styles/form.css";
 
 const Update = () => {
+  const redirect = useNavigate();
+
   const [dogName, setDogName] = useState("");
   const [dogBreed, setDogBreed] = useState("");
   const [dogSize, setDogSize] = useState("");
@@ -22,8 +24,7 @@ const Update = () => {
   const [dogImage, setDogImage] = useState("");
   const [id, setID] = useState(null);
 
-  const redirect = useNavigate();
-  const { setDidUpdate, setDogAPI } = usePopup();
+  const { setDidUpdate, setDogAPI } = useDogs();
 
   useEffect(() => {
     setID(localStorage.getItem("ID"));

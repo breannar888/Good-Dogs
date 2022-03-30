@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { PopupProvider } from "./context/Context";
+import { DogsProvider } from "./context/Context";
 import Create from "./components/Create";
 import Update from "./components/Update";
 import Search from "./components/Search";
@@ -15,7 +15,7 @@ import { ThemeProvider } from "@mui/system";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <PopupProvider>
+      <DogsProvider>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Search />} />
@@ -27,7 +27,7 @@ function App() {
             <Route path="update" element={<Update />} />
           </Routes>
         </BrowserRouter>
-      </PopupProvider>
+      </DogsProvider>
     </ThemeProvider>
   );
 }

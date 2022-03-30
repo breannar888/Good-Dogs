@@ -8,20 +8,25 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import usePopup from "../context/Context";
+import useDogs from "../context/Context";
 import { Link } from "react-router-dom";
 import "../styles/form.css";
 
 const Create = () => {
+  const redirect = useNavigate();
+
   const [dogName, setDogName] = useState("");
   const [dogBreed, setDogBreed] = useState("");
   const [dogSize, setDogSize] = useState("");
   const [owner, setOwner] = useState("");
   const [dogDescription, setDogDescription] = useState("");
   const [dogImage, setDogImage] = useState("");
-
-  const redirect = useNavigate();
-  const { setDidUpdate, setDogAPI } = usePopup();
+  const [id, setID] = useState(null);
+  
+  const {
+    setDidUpdate,
+    setDogAPI,
+  } = useDogs();
 
   const postData = () => {
     axios

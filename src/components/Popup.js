@@ -7,10 +7,10 @@ import {
   DialogTitle,
   Button,
 } from "@mui/material";
-import usePopup from "../context/Context";
+import useDogs from "../context/Context";
 
 const Popup = () => {
-  const { didUpdate, setDidUpdate } = usePopup();
+  const { didUpdate, setDidUpdate } = useDogs();
   const handleClose = () => {
     setDidUpdate(false);
   };
