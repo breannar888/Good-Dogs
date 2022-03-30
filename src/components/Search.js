@@ -18,7 +18,7 @@ const Search = () => {
   return (
     <div>
       <Typography sx={{ textAlign: "center", p: "2%" }} variant="h3">
-        Doggies
+        Good Dogs
       </Typography>
       <div className="search-wrap">
         <TextField
