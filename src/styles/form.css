@@ -1,0 +1,16 @@
+.form-wrap {
+  padding-top: 2%;
+  margin: auto;
+  width: 70%;
+  text-align: center;
+}
+
+.form-action-wrap {
+  margin-top: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+/*# sourceMappingURL=form.css.map */
