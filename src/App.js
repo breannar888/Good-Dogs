@@ -16,7 +16,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <DogsProvider>
-        <BrowserRouter basename="breannar888.github.io//Good-Dogs">
+        <BrowserRouter basename="breannar888.github.io/Good-Dogs">
           <Routes>
             <Route path="/" element={<Search />} />
           </Routes>
