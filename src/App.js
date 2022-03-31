@@ -4,10 +4,9 @@ import Create from "./components/Create";
 import Update from "./components/Update";
 import Search from "./components/Search";
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Route,
   Routes,
-  BrowserRouter,
 } from "react-router-dom";
 import theme from "./styles/theme";
 import { ThemeProvider } from "@mui/system";
@@ -16,7 +15,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <DogsProvider>
-        <BrowserRouter basename="breannar888.github.io/Good-Dogs">
+        <HashRouter>
           <Routes>
             <Route path="/" element={<Search />} />
           </Routes>
@@ -26,7 +25,7 @@ function App() {
           <Routes>
             <Route path="update" element={<Update />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </DogsProvider>
     </ThemeProvider>
   );
