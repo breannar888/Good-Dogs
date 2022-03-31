@@ -21,7 +21,6 @@ const Create = () => {
   const [owner, setOwner] = useState("");
   const [dogDescription, setDogDescription] = useState("");
   const [dogImage, setDogImage] = useState("");
-  const [id, setID] = useState(null);
   
   const {
     setDidUpdate,
