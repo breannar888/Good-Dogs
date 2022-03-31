@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Good-Dogs/static/css/main.9bbcc750.css",
-    "main.js": "/Good-Dogs/static/js/main.8df2bba1.js",
+    "main.js": "/Good-Dogs/static/js/main.cb947b82.js",
     "index.html": "/Good-Dogs/index.html",
     "main.9bbcc750.css.map": "/Good-Dogs/static/css/main.9bbcc750.css.map",
-    "main.8df2bba1.js.map": "/Good-Dogs/static/js/main.8df2bba1.js.map"
+    "main.cb947b82.js.map": "/Good-Dogs/static/js/main.cb947b82.js.map"
   },
   "entrypoints": [
     "static/css/main.9bbcc750.css",
-    "static/js/main.8df2bba1.js"
+    "static/js/main.cb947b82.js"
   ]
 }
